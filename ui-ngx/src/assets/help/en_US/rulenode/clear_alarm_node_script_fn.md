@@ -22,10 +22,10 @@ Current Alarm Details can be accessed via `metadata.prevAlarmDetails`.<br>
 ```javascript
 var details = {};
 if (metadata.prevAlarmDetails) {
+  details = JSON.parse(metadata.prevAlarmDetails);
   // remove prevAlarmDetails from metadata
   delete metadata.prevAlarmDetails;
-  details = JSON.parse(metadata.prevAlarmDetails);
-}
+  }
 {:copy-code}
 ```
 
